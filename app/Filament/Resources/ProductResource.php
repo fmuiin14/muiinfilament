@@ -27,7 +27,8 @@ class ProductResource extends Resource
         return $form
             ->schema([
                 Card::make()->schema([
-                    Forms\Components\TextInput::make(name: 'code')->required()->unique(table: Product::class),
+                    Forms\Components\TextInput::make(name: 'code')->required(),
+                    // Forms\Components\TextInput::make(name: 'code')->required()->unique(table: Product::class),
                     Forms\Components\TextInput::make(name: 'name')->required(),
                     Forms\Components\TextInput::make(name: 'price')->required(),
                     Forms\Components\TextInput::make(name: 'stock')->required(),
